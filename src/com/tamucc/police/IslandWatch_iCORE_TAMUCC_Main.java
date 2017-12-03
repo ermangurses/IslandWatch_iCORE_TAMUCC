@@ -52,42 +52,36 @@ public class IslandWatch_iCORE_TAMUCC_Main extends Activity{
 	
 
 		
-        Call_Button.setOnClickListener(new OnClickListener() {
-    		
-    		public void onClick(View v) {
-    		    AlertDialog.Builder builder  = new AlertDialog.Builder(IslandWatch_iCORE_TAMUCC_Main.this);
-    		    
-    		    builder.setTitle("Call Police");
-    		
-    	 		builder.setMessage("Are you sure you want to call UPD?")
-    	 		       .setCancelable(false)
-    	 		       .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-    	 		           public void onClick(DialogInterface dialog, int id) {
-    	 		    		
-    	 		        	   String url = "tel:3618254444";
-    	 		    		    Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse(url));
-    	 		    		    startActivity(intent);
-    	 		           }
-    	 		       })
-    	 		       .setNegativeButton("No", new DialogInterface.OnClickListener() {
-    	 		           public void onClick(DialogInterface dialog, int id) {
-    	 		    	        dialog.cancel();
-    	 		    			Toast.makeText(getApplicationContext(), "Call Canceled", Toast.LENGTH_SHORT).show();
-    	 		           } 
-    	 		       });
-    	 		AlertDialog alert = builder.create();
-    	 		alert.show();
-    		}
-    	});
+        Call_Button.setOnClickListener(new OnClickListener() {	
+		  public void onClick(View v) {
+		    AlertDialog.Builder builder  = new AlertDialog.Builder(IslandWatch_iCORE_TAMUCC_Main.this);
+		    
+		    builder.setTitle("Call Police");
+		
+	 		builder.setMessage("Are you sure you want to call UPD?")
+	 		       .setCancelable(false)
+	 		       .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+	 		           public void onClick(DialogInterface dialog, int id) {
+	 		    		
+	 		        	   String url = "tel:3618254444";
+	 		    		    Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse(url));
+	 		    		    startActivity(intent);
+	 		           }
+	 		       })
+	 		       .setNegativeButton("No", new DialogInterface.OnClickListener() {
+	 		           public void onClick(DialogInterface dialog, int id) {
+	 		    	        dialog.cancel();
+	 		    			Toast.makeText(getApplicationContext(), "Call Canceled", Toast.LENGTH_SHORT).show();
+	 		           } 
+	 		       });
+	 		AlertDialog alert = builder.create();
+	 		alert.show();
+		  }
+      	});
         
-        
-        
-        
- 
-
         Report_Button.setOnClickListener(new OnClickListener() {
     		
-    		public void onClick(View v) {
+    		  public void onClick(View v) {
     		    
     			AlertDialog.Builder builder  = new AlertDialog.Builder(IslandWatch_iCORE_TAMUCC_Main.this);
     		    
@@ -111,9 +105,8 @@ public class IslandWatch_iCORE_TAMUCC_Main extends Activity{
     	 		       });
     	 		AlertDialog alert = builder.create();
     	 		alert.show();
-
-    		}
-    	});
+    		  }
+    	  });
            
         
 	}
@@ -123,10 +116,7 @@ public class IslandWatch_iCORE_TAMUCC_Main extends Activity{
 	{
 		super.onResume();
 			
-
 	}
-	
-
 	
 	public OnClickListener  imageButtonListener = new OnClickListener()
 	{
@@ -146,9 +136,7 @@ public class IslandWatch_iCORE_TAMUCC_Main extends Activity{
 		finish();
 	    
 	}
-	
-	
-	
+
     public void AgreementDialogBox()
     {
 		    AlertDialog.Builder builder  = new AlertDialog.Builder(IslandWatch_iCORE_TAMUCC_Main.this);
